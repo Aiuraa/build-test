@@ -25,15 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - uses: AGraber/sampctl-action@v1
-          with:
-          version: '1.10.1'
-          
-      - run: sampctl p build
-
-      - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v3
+        with:
+        version: '1.9.1' # optional, 1.9.1 by default
+      - run: sampctl p build --forceEnsure
+      - uses: actions/upload-artifact@v3
         with:
         name: build-artifact
         path: gamemodes/output.amx
         retention-days: 1
-
