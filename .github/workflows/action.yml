@@ -24,8 +24,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: AGraber/sampctl-action@v1
-          with:
-          version: '1.9.1' # optional, 1.9.1 by default
       - run: sampctl p build --forceEnsure
 
       - uses: actions/upload-artifact@v3
