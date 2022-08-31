@@ -1,0 +1,8 @@
+{
+    "user": "Aiuraa",
+    "repo": "build-test",
+    "entry": "entry.pwn",
+    "output": "gamemodes/output.amx",
+    "dependencies": ["pawn-lang/samp-stdlib"],
+    "local": true
+}
