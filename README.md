@@ -2,7 +2,7 @@
 Build your pawn script using action powered by sampctl.
 
 ## Usage
-Use this template to begin coding
+[Use this template](https://github.com/Aiuraa/sampctl-build-action/generate) to begin coding
 
 ## Credits
 
