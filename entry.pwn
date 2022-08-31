@@ -2,5 +2,5 @@
 
 main()
 {
-    print("Hello from Termux sheesh");
+    print("Hello World");
 }
