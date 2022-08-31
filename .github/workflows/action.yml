@@ -28,6 +28,6 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-        name: build-artifact
-        path: gamemodes/output.amx
-        retention-days: 1
+          name: build-artifact
+          path: gamemodes/output.amx
+          retention-days: 1
