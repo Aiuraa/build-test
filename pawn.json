@@ -1,6 +1,6 @@
 {
     "user": "Aiuraa",
-    "repo": "build-test",
+    "repo": "sampctl-build-action",
     "entry": "entry.pwn",
     "output": "gamemodes/output.amx",
     "dependencies": ["pawn-lang/samp-stdlib"],
