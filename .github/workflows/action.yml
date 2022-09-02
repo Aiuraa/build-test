@@ -7,6 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
     branches: [ "master" ]
+    
   pull_request:
     branches: [ "master" ]
 
@@ -22,12 +23,22 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: AGraber/sampctl-action@v1
       - run: sampctl p build --forceEnsure
 
       - uses: actions/upload-artifact@v3
         with:
-          name: build-artifact
-          path: gamemodes/output.amx
-          retention-days: 1
+          name: amx-release
+          retention-days: 12 # 1 week retention files for users to download artifact
+          if-no-files-found: error
+          
+          # Zip required files such as AMX only, sampctl configurations, license and README.md.
+          path: |
+            gamemodes/output.amx
+            pawn.json
+            LICENSE
+            README.md
+            !dependencies/
+            !*.pwn
+            !*.txt
